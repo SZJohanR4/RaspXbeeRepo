@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Control RaspXbee</title>
+  </head>
+
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">RaspXbeeRy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Conexiones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Red</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cloud Conector</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Herramientas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sistema</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Data</a>
+            </li>
+          </ul>
+
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Registrarse</a>
+              </li>
+            </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="modal hide" id="myModal">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">x</button>
+            <h3>Login to MyWebsite.com</h3>
+          </div>
+          <div class="modal-body">
+            <form method="post" action='' name="login_form">
+              <p><input type="text" class="span3" name="eid" id="email" placeholder="Email"></p>
+              <p><input type="password" class="span3" name="passwd" placeholder="Password"></p>
+              <p><button type="submit" class="btn btn-primary">Sign in</button>
+                <a href="#">Forgot Password?</a>
+              </p>
+            </form>
+          </div>
+          <div class="modal-footer">
+            New To MyWebsite.com?
+            <a href="#" class="btn btn-primary">Register</a>
+          </div>
+        </div>
+
+    <main role="main">
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">RaspXbee Control Panel</h1>
+          <p>Permitimos el monitoreo constante por medio de sensores ubicados estrategicamente en las riveras del rio para desarrollar un modelo de prediccion sobre el posible comportamiento del afluente.</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Probar &raquo;</a></p>
+        </div>
+      </div>
+      <br>
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card border-light mb-3 text-center"  style="width: 18rem;">
+              <img class="card-img-top" src="../imgs/LogoProyecto.png" alt="Logo ">
+              <div class="card-body">
+                <h2 class="card-title">Proyecto</h2>
+                <p class="card-text">Un proyecto desarrollado con la universidad Minuto de Dios y su semillero Codigo Enigma, el cual es dirigido por el Maestro Carlos Sierra.</p>
+              </div>
+           </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-light mb-3 text-center" style="width: 18rem;">
+              <img class="card-img-top" src="../imgs/LogoUniminuto.png" alt="Logo Uniminuto">
+              <div class="card-body">
+                <h2 class="card-title">Uniminuto</h2>
+                <p class="card-text">Proveer a las comunidades educativas y de base de las distintas regiones colombianas,del conocimiento que su desarrollo integral demande, mediante la ejecución de la investigación, el desarrollo tecnológico y la innovación.</p>
+              </div>
+           </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-light mb-3 text-center" style="width: 18rem;">
+              <img class="card-img-top" src="../imgs/LogoSemillero.png" alt="Logo Semillero">
+              <div class="card-body">
+                <h2 class="card-title">Codigo Enigma</h2>
+                <p class="card-text">Un semillero posicionado al interior de la facultad, con claras fortalezas en computación, proyectos en desarrollo, y resultados de investigación divulgados.</p>
+              </div>
+           </div>
+          </div>
+        </div>
+
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+           <div class="row">
+             <div class="col-6 col-md text-center">
+               <h5>Documentacion</h5>
+               <ul class="list-unstyled text-small">
+                 <li><a class="text-muted" href="#">Diagramas</a></li>
+                 <li><a class="text-muted" href="#">Procesos</a></li>
+                 <li><a class="text-muted" href="#">Documentos</a></li>
+               </ul>
+             </div>
+             <div class="col-6 col-md text-center">
+               <h5>Fuentes</h5>
+               <ul class="list-unstyled text-small">
+                 <li><a class="text-muted" href="#">GitHub</a></li>
+                 <li><a class="text-muted" href="#">Research Gate</a></li>
+                 <li><a class="text-muted" href="#">linkdn</a></li>
+               </ul>
+             </div>
+           </div>
+           <div class="col-12 col-md text-center">
+             <small class="d-block mb-3 text-muted">&copy; Sebastian Urrea & Johan Sanchez</small>
+           </div>
+         </footer>
+      </div> <!-- /container -->
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="js\bootstrap.min.js"></script>
+  </body>
+</html>
