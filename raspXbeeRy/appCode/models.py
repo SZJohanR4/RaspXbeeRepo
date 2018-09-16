@@ -25,7 +25,7 @@ class Nodo(models.Model):
     def __str__(self):
         return self.Ip
 
-class Gate_Nodo((models.Model):
+class Gate_Nodo(models.Model):
     FK_idGateWay=models.ForeignKey(GateWay, on_delete=models.CASCADE)
     FK_idNodo=models.ForeignKey(Nodo, on_delete=models.CASCADE)
 
@@ -45,7 +45,7 @@ class Wifi(models.Model):
     def __str__(self):
         return self.Nombre
 
-class Wifi_Conex_Gate((models.Model):
+class Wifi_Conex_Gate(models.Model):
     FK_idWifi=models.ForeignKey(Wifi, on_delete=models.CASCADE)
     FK_idGateWay=models.ForeignKey(GateWay, on_delete=models.CASCADE)
 
@@ -64,13 +64,12 @@ class SimCard(models.Model):
     def __str__(self):
         return self.Nombre
 
-class Sim_Conex_Gate((models.Model):
+class Sim_Conex_Gate(models.Model):
     FK_idSimCard=models.ForeignKey(SimCard, on_delete=models.CASCADE)
     FK_idGateWay=models.ForeignKey(GateWay, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.id
-
 
 class Ethernet (models.Model):
     ModoConex=models.CharField(max_length=50)
@@ -79,7 +78,7 @@ class Ethernet (models.Model):
     def __str__(self):
         return self.ModoConex
 
-class Ether_Conex_Gate((models.Model):
+class Ether_Conex_Gate(models.Model):
     FK_idEthernet=models.ForeignKey(Ethernet, on_delete=models.CASCADE)
     FK_idGateWay=models.ForeignKey(GateWay, on_delete=models.CASCADE)
 

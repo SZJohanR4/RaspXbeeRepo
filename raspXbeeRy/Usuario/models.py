@@ -11,7 +11,7 @@ class Usuario(models.Model):
         return self.Nombre
 
 
- class Log(models.Model):
+class Log(models.Model):
     Accion=models.CharField(max_length=50)
     Fecha=models.CharField(max_length=50)
     Donde=models.CharField(max_length=50)

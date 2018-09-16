@@ -56,7 +56,7 @@ ROOT_URLCONF = 'raspXbeeRy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'Interfaz raspXbee')],
+        'DIRS': [os.path.join(BASE_DIR, 'Interfaz raspXbee/html')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
