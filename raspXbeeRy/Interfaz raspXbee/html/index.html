@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Conexiones</a>
+              <a class="nav-link" href="RaspXbee/Conexiones/conexionEthernet.html">Conexiones</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Red</a>
@@ -52,7 +52,6 @@
         </div>
       </nav>
     </header>
-
     <div class="modal hide" id="myModal">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">x</button>
@@ -82,6 +81,9 @@
         </div>
       </div>
       <br>
+      {% csrf_token %}
+               {{form.user_name}}
+               {{form.password}}
       <div class="container">
         <!-- Example row of columns -->
         <div class="row">
