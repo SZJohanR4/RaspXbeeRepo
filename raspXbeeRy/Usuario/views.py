@@ -7,3 +7,9 @@ def index(request):
 
 def conexiones(request):
     return render(request,'conexionEthernet.html')
+
+def sistema(request):
+    return render(request,'onOffSistema.html')
+
+def red(request):
+    return render(request,'infGetway.html')
