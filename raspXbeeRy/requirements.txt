@@ -1,3 +1,10 @@
-django
-psycopg2
-postgres
+Django==2.1.7
+psycopg2==2.7.7
+postgres==2.2.2
+
+# sudo apt update
+# sudo apt install postgresql postgresql-contrib
+# sudo -i -u postgres
+# createdb raspXbeeRy;
+# psql
+# ALTER ROLE postgres WITH PASSWORD 'maribel27';
